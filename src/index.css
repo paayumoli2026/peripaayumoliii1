@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Satisfy&display=swap');
+@import "tailwindcss";
+@import "./styles/font.css";
+
+/* 2025 Modern Spacing & Tokens */
+:root {
+  --font-main: 'Outfit', sans-serif;
+  --font-accent: 'Satisfy', cursive;
+
+  /* Primary Brand: Warm Yellow/Gold */
+  --color-brand-bg: #FFF9E6;
+  /* Ultra-soft warm yellow */
+  --color-brand-primary: #FFB800;
+  /* Rich gold */
+  --color-brand-secondary: #FF5C00;
+  /* Warm orange */
+  --color-brand-accent: #D90000;
+  /* Deep red for contrast */
+
+  /* Modern Effects */
+  --shadow-soft: 0 10px 40px -10px rgba(0, 0, 0, 0.05);
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.3);
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--color-brand-bg);
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--color-brand-bg);
+  color: #1a1a1a;
+  /* Modern dark grey for readability on light bg */
+  margin: 0;
+  overflow-x: hidden;
+}
+
+/* 2025 Typography: Blended Colors */
+.text-blend {
+  background: linear-gradient(to right, #FF5C00, #D90000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-text-gradient {
+  background: linear-gradient(90deg, #FFB800 0%, #FF5C00 50%, #D90000 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.glass-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  border-radius: 24px;
+  box-shadow: var(--shadow-soft);
+}
+
+/* Sacred & Modern Lighting */
+.sacred-glow {
+  background: radial-gradient(circle at center, rgba(255, 184, 0, 0.15) 0%, transparent 70%);
+  filter: blur(60px);
+}
+
+.ambient-light {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background: radial-gradient(circle at 50% 50%, rgba(255, 92, 0, 0.05), transparent 70%);
+}
+
+.texture-grain {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.03;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+.font-tamil {
+  font-family: 'Latha', 'Tamil Sangam MN', 'Vijaya', 'Arial Unicode MS', sans-serif;
+}
+
+:root {
+  --font-heading: 'Outfit', sans-serif;
+  --font-body: 'Outfit', sans-serif;
+  --color-gold: #FFB800;
+  --color-saffron: #FF5C00;
+  --color-deep-red: #D90000;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 20s linear infinite;
+}
+
+.pause-on-hover:hover .animate-scroll {
+  animation-play-state: paused;
+}
