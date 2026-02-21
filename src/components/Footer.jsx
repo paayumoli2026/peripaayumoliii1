@@ -54,7 +54,7 @@ const Footer = () => {
                   { name: "Mr. Abdul Samad", phone: "8111051404" },
                   { name: "Mr. Aakash Kummar I", phone: "9345375156" },
                   { name: "Ms. Benylin Lifna", phone: "9343447251" },
-                  { name: "Mr. Dhanus P", phone: "7395945696" },
+                  { name: "Mr. Dhanush P", phone: "7395945696" },
                   { name: "Mr. Jayaseelan K", phone: "7876000270" },
                   { name: "Mr. Santosh Taj K", phone: "6379665645" },
                   { name: "Ms. Soundarya S", phone: "6382109028" },
