@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Satisfy&display=swap');
+@import "tailwindcss";
+@import "./styles/font.css";
+
+/* 2025 Modern Spacing & Tokens */
+:root {
+  --font-main: 'Outfit', sans-serif;
+  --font-accent: 'Satisfy', cursive;
+
+  /* Dark fire palette */
+  --color-brand-bg: #050505;
+  --color-brand-primary: #ffc06c;
+  --color-brand-secondary: #ff5b24;
+  --color-brand-accent: #ff2f19;
+
+  /* Modern Effects */
+  --shadow-soft: 0 14px 36px -12px rgba(0, 0, 0, 0.7);
+  --glass-bg: rgba(18, 10, 7, 0.64);
+  --glass-border: rgba(255, 154, 83, 0.26);
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--color-brand-bg);
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--color-brand-bg);
+  color: #f5dcc1;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+/* 2025 Typography: Blended Colors */
+.text-blend {
+  background: linear-gradient(90deg, #ffd78f 0%, #ff7f3a 45%, #ff3f1f 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-text-gradient {
+  background: linear-gradient(90deg, #ffe6a9 0%, #ffb14b 30%, #ff6f2d 65%, #ff321b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.glass-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(14px);
+  border: 1px solid var(--glass-border);
+  border-radius: 24px;
+  box-shadow: var(--shadow-soft);
+}
+
+.heritage-image-card {
+  background:
+    radial-gradient(
+      circle at 50% 50%,
+      rgba(255, 145, 62, 0.42) 0%,
+      rgba(255, 96, 30, 0.26) 38%,
+      rgba(22, 12, 8, 0.88) 80%
+    ),
+    var(--glass-bg);
+}
+
+.heritage-bg-aura {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: min(188%, 980px);
+  aspect-ratio: 1 / 1;
+  height: auto;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: -20;
+  border-radius: 50%;
+  background:
+    radial-gradient(
+      circle at 50% 50%,
+      rgba(255, 140, 58, 0.34) 0%,
+      rgba(255, 96, 30, 0.2) 47%,
+      rgba(20, 10, 7, 0.1) 78%,
+      transparent 100%
+    ),
+    radial-gradient(circle at 50% 40%, rgba(255, 183, 104, 0.12) 0%, transparent 58%);
+  filter: blur(10px);
+}
+
+.heritage-bg-logo {
+  opacity: 0.34;
+}
+
+/* Sacred & Modern Lighting */
+.sacred-glow {
+  background: radial-gradient(circle at center, rgba(255, 148, 46, 0.3) 0%, rgba(255, 83, 11, 0.12) 44%, transparent 74%);
+  filter: blur(60px);
+}
+
+.ambient-light {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background: radial-gradient(circle at 50% 50%, rgba(255, 86, 0, 0.16), transparent 70%);
+}
+
+.texture-grain {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.03;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+.font-tamil {
+  font-family: 'Latha', 'Tamil Sangam MN', 'Vijaya', 'Arial Unicode MS', sans-serif;
+}
+
+:root {
+  --font-heading: 'Outfit', sans-serif;
+  --font-body: 'Outfit', sans-serif;
+  --color-gold: #ffc06c;
+  --color-saffron: #ff5b24;
+  --color-deep-red: #ff2f19;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 20s linear infinite;
+}
+
+.pause-on-hover:hover .animate-scroll {
+  animation-play-state: paused;
+}
+
+/* Dark-fire readable text overrides for existing utility classes */
+.text-black {
+  color: #f5dcc1 !important;
+}
+
+.text-gray-950,
+.text-gray-900 {
+  color: #f6e2c7 !important;
+}
+
+.text-gray-800,
+.text-gray-700 {
+  color: #f0d1ad !important;
+}
+
+.text-gray-600,
+.text-gray-500 {
+  color: #d7a27a !important;
+}
+
+.text-gray-400,
+.text-gray-300 {
+  color: #b67d58 !important;
+}
